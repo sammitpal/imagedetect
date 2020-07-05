@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Clarifai from 'clarifai';
-import Navigation from './components/Navigation/Navigation';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import { render } from '@testing-library/react';
@@ -48,7 +47,6 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Navigation />
         <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
         <FaceRecognition imageUrl={this.state.imageUrl}/>
       </div>
